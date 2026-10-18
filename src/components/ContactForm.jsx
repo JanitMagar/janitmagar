@@ -29,7 +29,7 @@ function ContactForm() {
     );
 
     window.location.href =
-      `mailto:${contactEmail}?subject=${subject}&body=${messageBody}`;
+      "https://mail.google.com/mail/u/0/#inbox?compose=CllgCJZbjGdPDmFQxtVDkVcjzzVjDlBrkprCJbLBpszKNcPbJgpTmgVMLQfbvDlgFshzPNkTqtL";
   }
 
   return (
