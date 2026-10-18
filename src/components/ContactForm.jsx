@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { contactEmail } from "../data/portfolioData.js";
+
+const GMAIL_ADDRESS = "janitmagar2007@gmail.com";
 
 function ContactForm() {
   const [formValues, setFormValues] = useState({
@@ -28,8 +29,14 @@ function ContactForm() {
       `Name: ${formValues.name}\nEmail: ${formValues.email}\n\n${formValues.message}`,
     );
 
-    window.location.href =
-      "https://mail.google.com/mail/u/0/#inbox?compose=CllgCJZbjGdPDmFQxtVDkVcjzzVjDlBrkprCJbLBpszKNcPbJgpTmgVMLQfbvDlgFshzPNkTqtL";
+    // Opens Gmail directly on a new compose window with "To" already filled in
+    const gmailComposeUrl =
+      `https://mail.google.com/mail/?view=cm&fs=1` +
+      `&to=${encodeURIComponent(GMAIL_ADDRESS)}` +
+      `&su=${subject}` +
+      `&body=${messageBody}`;
+
+    window.open(gmailComposeUrl, "_blank", "noopener,noreferrer");
   }
 
   return (
@@ -72,7 +79,7 @@ function ContactForm() {
         Send message <span aria-hidden="true">→</span>
       </button>
       <p className="contact-form-note" id="contact-form-note">
-        OPENS YOUR EMAIL APPLICATION · NO DATA STORED
+        OPENS GMAIL · NO DATA STORED
       </p>
     </form>
   );
