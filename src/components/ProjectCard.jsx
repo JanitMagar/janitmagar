@@ -28,6 +28,14 @@ function ProjectCard({ project, featured = false }) {
           <li key={tag}>{tag}</li>
         ))}
       </ul>
+      <a
+        className="project-link"
+        href={project.href}
+        target="_blank"
+        rel="noreferrer"
+      >
+        VIEW ON GITHUB <span aria-hidden="true">↗</span>
+      </a>
     </article>
   );
 }

@@ -733,6 +733,14 @@ svg {
   color: var(--green);
 }
 
+.experience-list .experience-card:nth-child(1) .experience-topline h3 {
+  color: #ff8a1f;
+}
+
+.experience-list .experience-card:nth-child(3) .experience-topline h3 {
+  color: #2de2e6;
+}
+
 .experience-organization {
   margin: 5px 0 0;
   color: #c5d0d9;
@@ -826,6 +834,25 @@ svg {
   border: 1px solid rgba(156, 181, 200, 0.14);
   color: #8797a5;
   font-size: 9px;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 8px;
+  padding-top: 13px;
+  border-top: 1px solid var(--line);
+  color: #cdeaf5;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.project-link:hover {
+  color: var(--blue);
 }
 
 .education-list {
